@@ -21,7 +21,8 @@ do{
             fCelsius()
             break
         case("3"):
-
+            console.log("\n=== Quilômetros para Milhas ===\n")
+            quilometrosM()
             break
         case("4"):
 
@@ -53,6 +54,17 @@ do{
         }else{
             let conversor = (temperatura - 32) * 5 / 9
             console.log(`\n${temperatura}°F equivalem a ${conversor.toFixed(2)}°C`)
+        }
+    }
+
+    function quilometrosM(){
+        let distancia = Number(prompt("Digite a distância em quilômetros: "))
+        if(isNaN(distancia)){
+            console.log("\nDigite uma distância válida!\n")
+            quilometrosM()
+        }else{
+            let conversor = distancia * 0.621371
+            console.log(`\n${distancia} Km equivalem a ${conversor.toFixed(2)} milhas`)
         }
     }
 
