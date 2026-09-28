@@ -25,7 +25,8 @@ do{
             quilometrosM()
             break
         case("4"):
-
+            console.log("\n=== Milhas para Quilômetros ===\n")
+            milhasQ()
             break
         case("0"):
             sairSistema()
@@ -65,6 +66,17 @@ do{
         }else{
             let conversor = distancia * 0.621371
             console.log(`\n${distancia} Km equivalem a ${conversor.toFixed(2)} milhas`)
+        }
+    }
+
+    function milhasQ(){
+        let distancia = Number(prompt("Digite a distância em milhas: "))
+        if(isNaN(distancia)){
+            console.log("\nDigite uma distância válida!\n")
+            milhasQ()
+        }else{
+            let conversor = distancia * 1.60934
+            console.log(`\n${distancia} milhas equivalem a ${conversor.toFixed(2)} Km`)
         }
     }
 
