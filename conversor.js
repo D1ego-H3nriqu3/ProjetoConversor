@@ -25,10 +25,14 @@ do{
 
             break
         case("0"):
-
+            sairSistema()
             break
         default:
             console.log("\nDigite uma opção válida")
-
     }
 }while(indice === true)
+
+    function sairSistema(){
+        console.log("\n...Saindo do sistema de conversor...\n")
+        indice = false
+    }
