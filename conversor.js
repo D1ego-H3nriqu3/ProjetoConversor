@@ -71,7 +71,7 @@ do{
 
     function milhasQ(){
         let distancia = Number(prompt("Digite a distância em milhas: "))
-        if(isNaN(distancia)){
+        if(isNaN(distancia) || distancia < 0){
             console.log("\nDigite uma distância válida!\n")
             milhasQ()
         }else{
