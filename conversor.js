@@ -13,7 +13,8 @@ do{
     let resposta = prompt("Escolha uma opção: ").trim()
     switch(resposta){
         case("1"):
-
+            console.log("\n===Celsius para Fahrenheit===\n")
+            celsiusF()
             break
         case("2"):
 
@@ -31,6 +32,17 @@ do{
             console.log("\nDigite uma opção válida")
     }
 }while(indice === true)
+
+    function celsiusF(){
+        let temperatura = Number(prompt("Digite a temperatura em Celsius: "))
+        if(isNaN(temperatura)){
+            console.log("\nDigite uma temperatura válida!\n")
+            celsiusF()
+        }else{
+            let conversor = temperatura * 9 / 5 + 32.
+            console.log(`\n${temperatura}°C equivalem a ${conversor}°F`)
+        }
+    }
 
     function sairSistema(){
         console.log("\n...Saindo do sistema de conversor...\n")
