@@ -59,7 +59,7 @@ do{
 
     function quilometrosM(){
         let distancia = Number(prompt("Digite a distância em quilômetros: "))
-        if(isNaN(distancia)){
+        if(isNaN(distancia) || distancia < 0){
             console.log("\nDigite uma distância válida!\n")
             quilometrosM()
         }else{
